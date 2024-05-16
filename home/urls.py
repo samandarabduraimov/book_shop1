@@ -1,6 +1,8 @@
 from django.urls import path
-from .views import landing_page
+from .views import landing_page,GetTest
 
-urlpatterns = [
-    path('', landing_page, name='landing_page')
+app_name = 'home'
+urlpatterns =[
+    path('',landing_page,name='landing_page'),
+    path('testt/',GetTest.as_view(),name='test')
 ]
